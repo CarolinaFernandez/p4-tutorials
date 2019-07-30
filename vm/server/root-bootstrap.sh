@@ -71,6 +71,9 @@ echo "p4:p4" | chpasswd
 echo "p4 ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/99_p4
 chmod 440 /etc/sudoers.d/99_p4
 usermod -aG vboxsf p4
+mkdir -p /home/p4/.ssh
+cp /home/vagrant/.ssh/authorized_keys /home/p4/.ssh
+chown p4:p4 -R /home/p4/.ssh
 
 cd /usr/share/lubuntu/wallpapers/
 #cp ~/p4-logo.png .

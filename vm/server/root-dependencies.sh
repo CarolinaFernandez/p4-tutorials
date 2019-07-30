@@ -1,4 +1,4 @@
 #!/bin/bash
 
-apt update
-apt install -y xauth vim git
+apt-get update
+apt-get install -y xauth vim git
