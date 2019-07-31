@@ -43,18 +43,18 @@ To build the virtual machine:
 - Clone the repository
 - Option A: server (*headless method*) with X11-Forwarding enabled:
   - Run the following:
-```
-cd vm/server
-vagrant up
-vagrant ssh
-```
+    ```
+    cd vm/server
+    vagrant up
+    vagrant ssh
+    ```
   - The machine will be running in the back, whilst you can work via a remote or terminal connection
 - Option B: desktop with GUI capabilities:
   - Run the following:
-```
-cd vm/desktop
-vagrant up
-```
+    ```
+    cd vm/desktop
+    vagrant up
+    ```
   - Log in with username `p4` and password `p4` and issue the command `sudo shutdown -r now`
   - When the machine reboots, you should have a graphical desktop machine with the required
 software pre-installed.
