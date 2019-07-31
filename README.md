@@ -52,7 +52,7 @@ vagrant ssh
 - Option B: desktop with GUI capabilities:
   - Run the following:
 ```
-cd vm/server
+cd vm/desktop
 vagrant up
 ```
   - Log in with username `p4` and password `p4` and issue the command `sudo shutdown -r now`
@@ -63,7 +63,7 @@ software pre-installed.
 
 You will need the script to execute to completion before you can see the `p4` login on your virtual machine's GUI. In some cases, the `vagrant up` command brings up only the default `vagrant` login with the password `vagrant`. Dependencies may or may not have been installed for you to proceed with running P4 programs. Please refer the existing issues to help fix your problem or create a new one if your specific problem isn't addressed there.*
 
-To install dependencies by hand, please reference the [vm](../vm) installation scripts.
+To install dependencies by hand, please reference the [vm](vm) installation scripts.
 They contain the dependencies, versions, and installation procedure.
 You should be able to run them directly on an Ubuntu 16.04 machine:
 - `sudo ./root-bootstrap.sh`
