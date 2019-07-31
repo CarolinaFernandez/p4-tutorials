@@ -41,17 +41,29 @@ virtual machine or install several dependencies.
 To build the virtual machine:
 - Install [Vagrant](https://vagrantup.com) and [VirtualBox](https://virtualbox.org)
 - Clone the repository
-- `cd vm`
-- `vagrant up`
-- Log in with username `p4` and password `p4` and issue the command `sudo shutdown -r now`
-- When the machine reboots, you should have a graphical desktop machine with the required
+- Option A: server (*headless method*) with X11-Forwarding enabled:
+  - Run the following:
+    ```
+    cd vm/server
+    vagrant up
+    vagrant ssh
+    ```
+  - The machine will be running in the back, whilst you can work via a remote or terminal connection
+- Option B: desktop with GUI capabilities:
+  - Run the following:
+    ```
+    cd vm/desktop
+    vagrant up
+    ```
+  - Log in with username `p4` and password `p4` and issue the command `sudo shutdown -r now`
+  - When the machine reboots, you should have a graphical desktop machine with the required
 software pre-installed.
 
 *Note: Before running the `vagrant up` command, make sure you have enabled virtualization in your environment; otherwise you may get a "VT-x is disabled in the BIOS for both all CPU modes" error. Check [this](https://stackoverflow.com/questions/33304393/vt-x-is-disabled-in-the-bios-for-both-all-cpu-modes-verr-vmx-msr-all-vmx-disabl) for enabling it in virtualbox and/or BIOS for different system configurations.
 
 You will need the script to execute to completion before you can see the `p4` login on your virtual machine's GUI. In some cases, the `vagrant up` command brings up only the default `vagrant` login with the password `vagrant`. Dependencies may or may not have been installed for you to proceed with running P4 programs. Please refer the existing issues to help fix your problem or create a new one if your specific problem isn't addressed there.*
 
-To install dependencies by hand, please reference the [vm](../vm) installation scripts.
+To install dependencies by hand, please reference the [vm](vm) installation scripts.
 They contain the dependencies, versions, and installation procedure.
 You should be able to run them directly on an Ubuntu 16.04 machine:
 - `sudo ./root-bootstrap.sh`
