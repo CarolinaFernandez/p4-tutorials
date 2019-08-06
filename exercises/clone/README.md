@@ -171,8 +171,3 @@ these instances:
 ```bash
 make stop
 ```
-
-## Next Steps
-
-Congratulations, your implementation works! Move on to
-[Basic](../basic).

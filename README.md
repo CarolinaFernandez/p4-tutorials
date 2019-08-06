@@ -16,7 +16,11 @@ you get started with P4 programming, organized into several modules:
 * [Explicit Congestion Notification](./exercises/ecn)
 * [Multi-Hop Route Inspection](./exercises/mri)
 
-4. Advanced Behavior
+4. Recursive Processing
+* [Cloning](./exercises/clone)
+* [Recirculating](./exercises/recirculate)
+
+5. Advanced Behavior
 * [Source Routing](./exercises/source_routing)
 * [Calculator](./exercises/other/calc)
 * [Load Balancing](./exercises/load_balance)
