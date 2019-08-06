@@ -1,0 +1,76 @@
+{
+  "target": "bmv2",
+  "p4info": "build/recirculate.p4.p4info.txt",
+  "bmv2_json": "build/recirculate.json",
+  "table_entries": [
+    {
+      "table": "MyIngress.ipv4_forward_table",
+      "default_action": true,
+      "action_name": "MyIngress.drop",
+      "action_params": { }
+    },
+    {
+      "table": "MyIngress.ipv4_forward_table",
+      "match": {
+        "hdr.ipv4.dstAddr": ["10.0.1.1", 32]
+      },
+      "action_name": "MyIngress.ipv4_forward",
+      "action_params": {
+        "dstAddr": "00:00:00:00:01:01",
+        "port": 1
+      }
+    },
+    {
+      "table": "MyIngress.ipv4_forward_table",
+      "match": {
+        "hdr.ipv4.dstAddr": ["10.0.2.2", 32]
+      },
+      "action_name": "MyIngress.ipv4_forward",
+      "action_params": {
+        "dstAddr": "00:00:00:02:02:00",
+        "port": 2
+      }
+    },
+    {
+      "table": "MyIngress.ipv4_forward_table",
+      "match": {
+        "hdr.ipv4.dstAddr": ["10.0.3.3", 32]
+      },
+      "action_name": "MyIngress.ipv4_forward",
+      "action_params": {
+        "dstAddr": "00:00:00:03:03:00",
+        "port": 3
+      }
+    },
+    {
+      "table": "MyIngress.customdata_forward_table",
+      "match": {
+        "hdr.customdata.content_id": [101]
+      },
+      "action_name": "MyIngress.customdata_forward",
+      "action_params": {
+        "port": 1
+      }
+    },
+    {
+      "table": "MyIngress.customdata_forward_table",
+      "match": {
+        "hdr.customdata.content_id": [102]
+      },
+      "action_name": "MyIngress.customdata_forward",
+      "action_params": {
+        "port": 2
+      }
+    },
+    {
+      "table": "MyIngress.customdata_forward_table",
+      "match": {
+        "hdr.customdata.content_id": [103]
+      },
+      "action_name": "MyIngress.customdata_forward",
+      "action_params": {
+        "port": 3
+      }
+    }
+  ]
+}
