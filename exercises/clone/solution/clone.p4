@@ -144,12 +144,12 @@ control MyIngress(inout headers hdr,
     apply {
         // Least-Prefix Matching applied only when IPv4 header is correct
         if (hdr.ipv4.isValid()) {
+            // Clone every packet
+            clone_packet();
             // Forward the non-cloned instance
             // Note: a check on the "instance_type" of the packet is redundant for any
             // kind of cloning, since cloned packets will always appear at the egress pipeline
             ipv4_forward_table.apply();
-            // Clone every packet
-            clone_packet();
         }
     }
 }

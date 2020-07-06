@@ -74,7 +74,7 @@ server. In `h2`'s xterm, start the server:
    make clean
    ```
 
-The message was received because the forwarading behaviour is
+The message was received because the forwarding behaviour is
 provided. However, a copy is expected in the exercise.
 Your job is to extend this file so it initially clones the
 packet to be forwarded.
