@@ -16,7 +16,7 @@
       },
       "action_name": "MyIngress.ipv4_forward",
       "action_params": {
-        "dstAddr": "00:00:00:01:03:00",
+        "dstAddr": "00:00:00:01:01:00",
         "port": 2
       }
     },
@@ -27,7 +27,7 @@
       },
       "action_name": "MyIngress.ipv4_forward",
       "action_params": {
-        "dstAddr": "00:00:00:02:03:00",
+        "dstAddr": "00:00:00:02:02:00",
         "port": 3
       }
     },

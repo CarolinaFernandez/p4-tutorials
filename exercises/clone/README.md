@@ -74,7 +74,7 @@ server. In `h2`'s xterm, start the server:
    make clean
    ```
 
-The message was received because the forwarding behaviour is
+The message was received because the forwarading behaviour is
 provided. However, a copy is expected in the exercise.
 Your job is to extend this file so it initially clones the
 packet to be forwarded.
@@ -139,6 +139,9 @@ A complete `clone.p4` will contain the following components:
 Follow the instructions from Step 1. This time, your message from `h1`
 should be delivered twice to `h2`, with some minor differences in its headers.
 
+*Note: in case you still received one message when applying the solution,
+try exiting the Mininet CLI and run "make clean" and "make run" again.*
+
 ### Food for thought
 
 Questions to consider:
@@ -169,5 +172,5 @@ running in the background. Use the following command to clean up
 these instances:
 
 ```bash
-make stop
+make clean
 ```

@@ -199,5 +199,5 @@ running in the background. Use the following command to clean up
 these instances:
 
 ```bash
-make stop
+make clean
 ```
